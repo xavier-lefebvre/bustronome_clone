@@ -1,0 +1,208 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  color: white;
+}
+
+p,
+a {
+  line-height: 2;
+  text-transform: uppercase;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #a09173;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.main {
+  background: #000000;
+}
+
+/* ======================================= navbar ======================================= */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 300px;
+  justify-content: flex-start;
+  align-items: center;
+  background: black;
+}
+
+.logo {
+  margin-bottom: 40px;
+  padding-top: 20px;
+}
+
+.logo img {
+  max-height: 132px;
+}
+
+.map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.map i {
+  font-size: xx-large;
+  padding: 10px;
+  color: #a09173;
+}
+
+.map .map-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-list {
+  width: 100%;
+  text-align: center;
+  padding-top: 10px;
+  display: none;
+}
+
+.nav-list .list-item {
+  display: block;
+  padding-top: 1px;
+  line-height: 1.5rem;
+}
+
+.nav-list li:hover {
+    background-color: red;
+}
+.sidebar .menu {
+  align-self: flex-start;
+  padding: 10px;
+}
+
+.menu-line {
+  width: 50px;
+  height: 5px;
+  background-color: #a09173;
+  margin-bottom: 12px;
+}
+
+.active {
+  display: block;
+}
+
+/*============================================ Carousel ==================================================*/
+.content {
+  background: #129a22;
+  flex: 1;
+  width: 100%;
+  height: auto;
+}
+
+/*============================================ Footer ====================================================*/
+.footer {
+  background-color: black;
+  color: white;
+  font-size: 0.6rem;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.footer .left {
+  display: flex;
+  flex-direction: row;
+  margin-left: 2%;
+  padding-top: 10px;
+}
+
+.lang {
+    line-height: 2;
+}
+
+.social ul {
+    display: flex;
+    margin: 0 10px;
+}
+
+.social ul li {
+    padding: 0 10px 0 10px;
+    margin: 0 5px;
+
+}
+
+.footer .right {
+    padding-top: 10px;
+}
+
+.made {
+    text-align: end;
+}
+
+
+/* ========================================= Responsive Layout ============================================*/
+@media screen and (min-width: 800px) {
+  .flex-container {
+    display: flex;
+    height: 95vh;
+  }
+
+  .sidebar {
+    max-height: 1080px;
+  }
+
+  .nav-list {
+    display: block;
+  }
+
+  .nav-list .list-item {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .map {
+    order: 8;
+  }
+}
+
+@media all and (max-width: 800px) {
+  .menu {
+    display: block;
+  }
+}
+
+/* .wrapper {
+    margin: auto;
+    max-width: 75rem;
+} */
