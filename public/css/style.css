@@ -134,6 +134,7 @@ img {
   height: auto;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   
 }
 
@@ -161,6 +162,7 @@ img {
 
 .footer .right {
     padding-top: 10px;
+    margin-right: 2%;
 }
 
 .made {
