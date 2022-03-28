@@ -32,8 +32,13 @@ ul {
   list-style: none;
 }
 
+.li {
+  line-height: 1.5em;
+}
+
 a {
   text-decoration: none;
+  padding: 10px;
 }
 
 a:hover {
@@ -47,6 +52,15 @@ img {
 
 .main {
   background: #000000;
+}
+
+.row {
+  display: flex;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
 }
 
 /* ======================================= navbar ======================================= */
@@ -99,9 +113,16 @@ img {
   line-height: 1.5rem;
 }
 
-.nav-list li:hover {
-    background-color: red;
+.nav-list .list-item:first-child {
+  background-color: #a09173;
 }
+
+.nav-list li:hover {
+    background-color: rgba(145, 141, 133, 0.5);
+    color: #a09173;
+}
+
+
 .sidebar .menu {
   align-self: flex-start;
   padding: 10px;
@@ -133,22 +154,33 @@ img {
   font-size: 0.6rem;
   height: auto;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   
 }
 
 .footer .left {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   margin-left: 2%;
   padding-top: 10px;
 }
 
 .lang {
     line-height: 2;
+    text-align: center;
 }
 
+.lang span {
+  color: #a09173;
+}
+
+.contact a {
+  color: #a09173;
+}
 .social ul {
     display: flex;
     margin: 0 10px;
@@ -163,10 +195,21 @@ img {
 .footer .right {
     padding-top: 10px;
     margin-right: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.legal {
+  text-align: center;
+}
+
+.legal a {
+  color: #a09173;
 }
 
 .made {
-    text-align: end;
+    text-align: center;
 }
 
 
@@ -195,7 +238,52 @@ img {
 
   .map {
     order: 8;
+    margin-top: auto;
   }
+
+  /*=========================================================*/
+  .footer {
+    background-color: black;
+    color: white;
+    font-size: 0.7rem;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+  }
+  
+  .footer .left {
+    display: flex;
+    flex-direction: row;
+    margin-left: 2%;
+    padding-top: 10px;
+  }
+  
+  .lang {
+      line-height: 2;
+  }
+  
+  .social ul {
+      display: flex;
+      margin: 0 10px;
+  }
+  
+  .social ul li {
+      padding: 0 10px 0 10px;
+      margin: 0 5px;
+  
+  }
+  
+  .footer .right {
+      padding-top: 10px;
+      margin-right: 2%;
+  }
+  
+  .made {
+      text-align: end;
+  }
+ 
 }
 
 @media all and (max-width: 800px) {

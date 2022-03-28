@@ -20,6 +20,10 @@ app.get('/', function(req, res){
     res.render("home");
 });
 
+app.get('/reservation', function(req,res){
+    res.render("reservation");
+});
+
 app.listen(3000, function(req, res){
     console.log("Server is running up");
 });

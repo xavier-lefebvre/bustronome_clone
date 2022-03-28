@@ -1,0 +1,16 @@
+.contentReservation {
+    background-image: url("../img/fond.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 20px;
+    color: white;
+    width: 100%;
+}
+
+.actionContainer {
+    height: 100%;
+    margin: 20px 20px 0 20px;
+    background-color: black;
+}
+
