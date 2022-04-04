@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const _ = require("lodash");
+const flatpickr = require("flatpickr");
 
 const app = express();
 
@@ -22,7 +23,14 @@ app.get('/', function(req, res){
 
 app.get('/reservation', function(req,res){
     res.render("reservation");
+    
 });
+
+app.get('/reservation/:reservationTab', function(req, res){
+    const reservationTabName = req.params.reservationTab;
+
+    res.render("reservation", { reservationStep: reservationTabName});
+})
 
 app.listen(3000, function(req, res){
     console.log("Server is running up");

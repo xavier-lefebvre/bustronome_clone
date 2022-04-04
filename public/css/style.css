@@ -21,8 +21,8 @@ a {
   color: white;
 }
 
-p,
-a {
+p
+ {
   line-height: 2;
   text-transform: uppercase;
 }
@@ -122,6 +122,9 @@ img {
     color: #a09173;
 }
 
+.nav-list a {
+  text-transform: uppercase;
+}
 
 .sidebar .menu {
   align-self: flex-start;

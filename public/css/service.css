@@ -1,0 +1,23 @@
+.servicesTable {
+    display: flex;
+    font-size: 0.9rem;
+    
+}
+
+.servicesTable th {
+    text-align: center;
+}
+.servicesTable td:not(:last-child), .servicesTable th:not(:last-child){
+    
+    border-right: 1px solid #a09173;
+    
+}
+
+.servicesTable th {
+    border-bottom: 1px solid #a09173;
+}
+
+.servicesTable td td:nth-child(2) {
+    border-bottom: 1px solid #a09173;
+}
+
