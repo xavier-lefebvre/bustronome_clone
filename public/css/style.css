@@ -21,6 +21,14 @@ a {
   color: white;
 }
 
+h2:first-of-type {
+  margin: 2% 0 0 2%;
+}
+
+h2 {
+  margin: 0 0 0 2%;
+}
+
 p
  {
   line-height: 2;
@@ -141,6 +149,12 @@ img {
 .active {
   display: block;
 }
+
+.visible {
+  visibility: visible;
+}
+
+
 
 /*============================================ Carousel ==================================================*/
 .content {

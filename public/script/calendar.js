@@ -50,6 +50,8 @@ const renderCalendar = () => {
 
   let days = "";
 
+  
+
   //for loop with decrement, insert last days of the previous month in document '.days' <div>
   for (let x = 5; x > 0; x--) {
     days += `<div class="prev-date">${prevLastDay - x + 1}</div>`;
@@ -63,7 +65,7 @@ const renderCalendar = () => {
       date.getMonth() === new Date().getMonth()
     ) {
       // >> create <div> with '.today' class.
-      days += `<div class="today">${i}</div>`;
+      days += `<div class="today selected">${i}</div>`;
     } else {
       days += `<div>${i}</div>`;
     }
@@ -72,7 +74,7 @@ const renderCalendar = () => {
   for (let j = 1; j <= 6; j++) {
     days += `<div class="next-date">${j}</div>`;
   }
-
+  
   monthDays.innerHTML = days;
 };
 
@@ -89,3 +91,24 @@ document.querySelector(".next").addEventListener("click", () => {
 });
 
 renderCalendar();
+
+// ==========================================================================================================================
+
+let today = document.querySelector(".today");
+
+document.querySelectorAll("div.days div").forEach((div) => {
+  
+  div.addEventListener("click", () => {
+    if (today) {
+      today.classList.remove("today");
+      document.querySelector(".selected").classList.remove("selected");
+      div.classList.add("selected");
+    } else {
+      document.querySelector(".selected").classList.remove("selected");
+      div.classList.add("selected");
+    }
+  });
+  
+});
+
+

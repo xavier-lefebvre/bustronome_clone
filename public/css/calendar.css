@@ -1,6 +1,6 @@
 .calendar-container {
     width: 100%;
-    background-color: #12121f;
+    /* background-color: #12121f; */
     color: #eee;
     display: flex;
     justify-content: flex-start;
@@ -13,7 +13,7 @@
     /* height: 15.6rem; 
      width: 45rem; original width
     height: 52rem; original height */ 
-    margin: 1%;
+    margin: 2%;
     background-color: #222227;
     box-shadow: 0 0.5rem 5rem rgba(0, 0, 0, 0.4);
 }
@@ -96,5 +96,9 @@
 }
 
 .today {
+    background-color: #167e56;
+}
+
+.selected {
     background-color: #167e56;
 }

@@ -2,7 +2,6 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const _ = require("lodash");
-const flatpickr = require("flatpickr");
 
 const app = express();
 
@@ -22,11 +21,12 @@ app.get('/', function(req, res){
 });
 
 app.get('/reservation', function(req,res){
-    res.render("reservation");
+    res.render("reservation", { reservationStep: "date"} );
     
 });
 
 app.get('/reservation/:reservationTab', function(req, res){
+    // reservationTabName is parameters who changes when user click reservation tab.
     const reservationTabName = req.params.reservationTab;
 
     res.render("reservation", { reservationStep: reservationTabName});
