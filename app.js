@@ -28,6 +28,7 @@ app.get('/reservation', function(req,res){
 app.get('/reservation/:reservationTab', function(req, res){
     // reservationTabName is parameters who changes when user click reservation tab.
     const reservationTabName = req.params.reservationTab;
+    const dateDay = req.body.thisDayValue;
 
     res.render("reservation", { reservationStep: reservationTabName});
 })
